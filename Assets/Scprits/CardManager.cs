@@ -25,7 +25,7 @@ public class CardManager : MonoBehaviour {
     }
 
     //リセット
-    public void Reset(List<GameObject> _cards)
+    void Reset(List<GameObject> _cards)
     {
         //元の位置に戻す
         Move(playerCards, -100);
@@ -39,7 +39,7 @@ public class CardManager : MonoBehaviour {
     }
 
     //カードを1つ抜き出す
-    public GameObject GetCard()
+    GameObject GetCard()
     {
         //山札からランダムにカードを取得する
         int num = Random.Range(0, cards.Count);
@@ -49,7 +49,7 @@ public class CardManager : MonoBehaviour {
     }
 
     //カードの移動
-    public void Move(List<GameObject> _cards, float posY)
+    void Move(List<GameObject> _cards, float posY)
     {
         for (int i = 0; i < _cards.Count; i++)
         {
